@@ -1,318 +1,450 @@
-<script type="text/javascript">
-	var priceList = {
-		plates: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
+<html>
+	<head>
+		<script type="text/javascript">
+			var priceList = {
+				"plates": [
+						{
+							displayName: "12in. Plate",
+							name: "12in_Plate",
+							price: 0.15
+						},
+						{
+							displayName: "10in. Plate",
+							name: "10in_Plate",
+							price: 0.12
+						},
+						{
+							displayName: "6.5in. Plate",
+							name: "6_5in_Plate",
+							price: 0.1
+						},
+						{
+							displayName: "Soup bowl/dessert dish",
+							name: "Soupbowl_dessertdish",
+							price: 0.12
+						},
+						{
+							displayName: "Coffee cup & saucer",
+							name: "Coffeecup_saucer",
+							price: 0.2
+						},
+						{
+							displayName: "Tea cup & saucer",
+							name: "Teacup_saucer",
+							price: 0.2
+						}
+					],
+				"squares": [
+					{
+						displayName: "10in Square Plate",
+						name: "10inSquarePlate",
+						price: 0.2
+					},
+					{
+						displayName: "8in Square Plate",
+						name: "8inSquarePlate",
+						price: 0.17
+					},
+					{
+						displayName: "5in Square plate",
+						name: "5inSquareplate",
+						price: 0.15
+					},
+					{
+						displayName: "4.5in Square Bowl",
+						name: "4_5inSquareBowl",
+						price: 0.15
+					}
+				],
+				"cutleries": [
+					{
+						displayName: "Dinner Knifes (x10)",
+						name: "DinnerKnifesx10",
+						price: 1.2
+					},
+					{
+						displayName: "Dinner Forks (x10)",
+						name: "DinnerForksx10",
+						price: 1.2
+					},
+					{
+						displayName: "Side Knifes (x10)",
+						name: "SideKnifesx10",
+						price: 1.2
+					},
+					{
+						displayName: "Side Forks (x10)",
+						name: "SideForksx10",
+						price: 1.2
+					},
+					{
+						displayName: "Dessert Spoon (x10)",
+						name: "DessertSpoonx10",
+						price: 1.2
+					},
+					{
+						displayName: "Soup Spoon (x10)",
+						name: "SoupSpoonx10",
+						price: 1.2
+					},
+					{
+						displayName: "Teaspoon (x10)",
+						name: "Teaspoonx10",
+						price: 1.2
+					},
+					{
+						displayName: "Serving Spoon",
+						name: "ServingSpoon",
+						price: 0.35
+					},
+					{
+						displayName: "Tablespoon",
+						name: "Tablespoon",
+						price: 0.1
+					}
+				],
+				"tables": [
+					{
+						displayName: "Round 5ft (10 people)",
+						name: "Round5ft10people",
+						price: 5.5
+					},
+					{
+						displayName: "Round 5ft 6in (seat 12)",
+						name: "Round5ft6inseat12",
+						price: 6
+					},
+					{
+						displayName: "White plastic chairs",
+						name: "Whiteplasticchairs",
+						price: 1.5
+					}
+				],
+				"stemware": [
+					{
+						displayName: "",
+						name: "",
+						price: 0
+					}
+				],
+				"linens": [
+					{
+						displayName: "",
+						name: "",
+						price: 0
+					}
+				],
+				"miscellaneous": [
+					{
+						displayName: "",
+						name: "",
+						price: 0
+					}
+				],
+				"others": [
+					{
+						displayName: "",
+						name: "",
+						price: 0
+					}
+				]
+			};
+			function validateForm() {
+			var price_12in_Plate=0.15;	/*12in. Plate*/
+			var price_10in_Plate=0.12;	/*10in. Plate*/
+			var price_6_5in_Plate=0.1;	/*6.5in. Plate*/
+			var price_Soupbowl_dessertdish=0.12;	/*Soup bowl/dessert dish*/
+			var price_Coffeecup_saucer=0.2;	/*Coffee cup & saucer*/
+			var price_Teacup_saucer=0.2;	/*Tea cup & saucer*/
+				
+				
+			var price_10inSquarePlate=0.2;	/*10in Square Plate*/
+			var price_8inSquarePlate=0.17;	/*8in Square Plate*/
+			var price_5inSquareplate=0.15;	/*5in Square plate*/
+			var price_4_5inSquareBowl=0.15;	/*4.5in Square Bowl*/
+				
+				
+			var price_DinnerKnifesx10=1.2;	/*Dinner Knifes (x10)*/
+			var price_DinnerForksx10=1.2;	/*Dinner Forks (x10)*/
+			var price_SideKnifesx10=1.2;	/*Side Knifes (x10)*/
+			var price_SideForksx10=1.2;	/*Side Forks (x10)*/
+			var price_DessertSpoonx10=1.2;	/*Dessert Spoon (x10)*/
+			var price_SoupSpoonx10=1.2;	/*Soup Spoon (x10)*/
+			var price_Teaspoonx10=1.2;	/*Teaspoon (x10)*/
+			var price_ServingSpoon=0.35;	/*Serving Spoon*/
+			var price_Tablespoon=0.1;	/*Tablespoon*/
+				
+				
+			var price_Round5ft10people=5.5;	/*Round 5ft (10 people)*/
+			var price_Round5ft6inseat12=6;	/*Round 5ft 6in (seat 12)*/
+			var price_Whiteplasticchairs=1.5;	/*White plastic chairs*/
+				
+				
+			var price_ChampagneFlutex32=4.2;	/*Champagne Flute (x32)*/
+			var price_White_MultiWine125mlx32=4.2;	/*White/Multi Wine 125ml (x32)*/
+			var price_RedWine175mlx24=3.36;	/*Red Wine 175ml (x24)*/
+			var price_Brandyx24=4.2;	/*Brandy (x24)*/
+			var price_HighBallGlassx24=2.88;	/*High Ball Glass  (x24)*/
+			var price_PintGlassx12=2.25;	/*Pint Glass (x12)*/
+			var price_Martini_cocktailGlassx12=3.75;	/*Martini/cocktail Glass (x12)*/
+			
+			
+			var price_Napkins=0.5;	/*Napkins */
+			var price_Squaretableclothpleaseindicatesize=5;	/*Square tablecloth (please indicate size)*/
+			var price_Rectangulartableclothpleaseindicatesize=5;	/*Rectangular tablecloth (please indicate size)*/
+			var price_106in_roundtablecloth=6.5;	/*106 in. round tablecloth*/
+			var price_120in_roundtablecloth=6.5;	/*120 in. round tablecloth*/
+				
+				
+			var price_TableNumberStand_number=1;	/*Table Number Stand (& number)*/
+			var price_DrinksDispenser=8;	/*Drinks Dispenser*/
+			
+				
+			var price_ChaffingDish_2Fuel=12;	/*Chaffing Dish & 2 Fuel*/
+				
+			var price_GlassJug1_8ltr=1;	/*Glass Jug 1.8ltr*/
+			
+			var price_Deposit=0.5;
+			
+			var total_price = 0	
+			
+			function updateTotalsForCategory(){
+				for	(var category in priceList){
+					if	(priceList.hasOwnProperty(category)){
+						var list = priceList[category];
+						
+						for (var i = 0; i < list.length; i++){
+							var qty;
+							try {
+								 qty = document.forms["frm_pricelist"]["Qty_" + list[i].name].value;
+							}
+							catch (e) {
+								console.log(e.message);
+								qty = 0;
+							}
+							
+							if(qty !== "" && qty !== 0){
+								total_price = total_price + qty * list[i].price;
+							}
+						}
+					}
+				}
+				
+				alert("Total Price is: " + total_price);
+				total_price = 0;
 			}
-		],
-		squares: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
+			
+			updateTotalsForCategory();
+				
+			var Qty_12in_Plate= document.forms["frm_pricelist"]["Qty_12in_Plate"].value;	
+			var total_12in_Plate= price_12in_Plate * Qty_12in_Plate; total_price = total_price + total_12in_Plate
+			
+			var Qty_10in_Plate= document.forms["frm_pricelist"]["Qty_10in_Plate"].value;	
+			var total_10in_Plate= price_10in_Plate * Qty_10in_Plate; total_price = total_price + total_10in_Plate
+			
+			var Qty_6_5in_Plate= document.forms["frm_pricelist"]["Qty_6_5in_Plate"].value;	
+			var total_6_5in_Plate= price_6_5in_Plate * Qty_6_5in_Plate; total_price = total_price + total_6_5in_Plate
+			
+			var Qty_Soupbowl_dessertdish= document.forms["frm_pricelist"]["Qty_Soupbowl_dessertdish"].value;	
+			var total_Soupbowl_dessertdish= price_Soupbowl_dessertdish * Qty_Soupbowl_dessertdish; total_price = total_price + total_Soupbowl_dessertdish
+			
+			var Qty_Coffeecup_saucer= document.forms["frm_pricelist"]["Qty_Coffeecup_saucer"].value;	
+			var total_Coffeecup_saucer= price_Coffeecup_saucer * Qty_Coffeecup_saucer; total_price = total_price + total_Coffeecup_saucer
+			
+			var Qty_Teacup_saucer= document.forms["frm_pricelist"]["Qty_Teacup_saucer"].value;	
+			var total_Teacup_saucer= price_Teacup_saucer * Qty_Teacup_saucer; total_price = total_price + total_Teacup_saucer
+				
+				
+			var Qty_10inSquarePlate= document.forms["frm_pricelist"]["Qty_10inSquarePlate"].value;	
+			var total_10inSquarePlate= price_10inSquarePlate * Qty_10inSquarePlate; total_price = total_price + total_10inSquarePlate
+			
+			var Qty_8inSquarePlate= document.forms["frm_pricelist"]["Qty_8inSquarePlate"].value;	
+			var total_8inSquarePlate= price_8inSquarePlate * Qty_8inSquarePlate; total_price = total_price + total_8inSquarePlate
+			
+			var Qty_5inSquareplate= document.forms["frm_pricelist"]["Qty_5inSquareplate"].value;	
+			var total_5inSquareplate= price_5inSquareplate * Qty_5inSquareplate; total_price = total_price + total_5inSquareplate
+			
+			var Qty_4_5inSquareBowl= document.forms["frm_pricelist"]["Qty_4_5inSquareBowl"].value;	
+			var total_4_5inSquareBowl= price_4_5inSquareBowl * Qty_4_5inSquareBowl; total_price = total_price + total_4_5inSquareBowl
+				
+				
+			var Qty_DinnerKnifesx10= document.forms["frm_pricelist"]["Qty_DinnerKnifesx10"].value;	
+			var total_DinnerKnifesx10= price_DinnerKnifesx10 * Qty_DinnerKnifesx10; total_price = total_price + total_DinnerKnifesx10
+			
+			var Qty_DinnerForksx10= document.forms["frm_pricelist"]["Qty_DinnerForksx10"].value;	
+			var total_DinnerForksx10= price_DinnerForksx10 * Qty_DinnerForksx10; total_price = total_price + total_DinnerForksx10
+			
+			var Qty_SideKnifesx10= document.forms["frm_pricelist"]["Qty_SideKnifesx10"].value;	
+			var total_SideKnifesx10= price_SideKnifesx10 * Qty_SideKnifesx10; total_price = total_price + total_SideKnifesx10
+			
+			var Qty_SideForksx10= document.forms["frm_pricelist"]["Qty_SideForksx10"].value;	
+			var total_SideForksx10= price_SideForksx10 * Qty_SideForksx10; total_price = total_price + total_SideForksx10
+			
+			var Qty_DessertSpoonx10= document.forms["frm_pricelist"]["Qty_DessertSpoonx10"].value;	
+			var total_DessertSpoonx10= price_DessertSpoonx10 * Qty_DessertSpoonx10; total_price = total_price + total_DessertSpoonx10
+			
+			var Qty_SoupSpoonx10= document.forms["frm_pricelist"]["Qty_SoupSpoonx10"].value;	
+			var total_SoupSpoonx10= price_SoupSpoonx10 * Qty_SoupSpoonx10; total_price = total_price + total_SoupSpoonx10
+			
+			var Qty_Teaspoonx10= document.forms["frm_pricelist"]["Qty_Teaspoonx10"].value;	
+			var total_Teaspoonx10= price_Teaspoonx10 * Qty_Teaspoonx10; total_price = total_price + total_Teaspoonx10
+			
+			var Qty_ServingSpoon= document.forms["frm_pricelist"]["Qty_ServingSpoon"].value;	
+			var total_ServingSpoon= price_ServingSpoon * Qty_ServingSpoon; total_price = total_price + total_ServingSpoon
+			
+			var Qty_Tablespoon= document.forms["frm_pricelist"]["Qty_Tablespoon"].value;	
+			var total_Tablespoon= price_Tablespoon * Qty_Tablespoon; total_price = total_price + total_Tablespoon
+				
+				
+			var Qty_Round5ft10people= document.forms["frm_pricelist"]["Qty_Round5ft10people"].value;	var total_Round5ft10people= price_Round5ft10people * Qty_Round5ft10people; total_price = total_price + total_Round5ft10people
+			var Qty_Round5ft6inseat12= document.forms["frm_pricelist"]["Qty_Round5ft6inseat12"].value;	var total_Round5ft6inseat12= price_Round5ft6inseat12 * Qty_Round5ft6inseat12; total_price = total_price + total_Round5ft6inseat12
+			var Qty_Whiteplasticchairs= document.forms["frm_pricelist"]["Qty_Whiteplasticchairs"].value;	var total_Whiteplasticchairs= price_Whiteplasticchairs * Qty_Whiteplasticchairs; total_price = total_price + total_Whiteplasticchairs
+				
+				
+			var Qty_ChampagneFlutex32= document.forms["frm_pricelist"]["Qty_ChampagneFlutex32"].value;	var total_ChampagneFlutex32= price_ChampagneFlutex32 * Qty_ChampagneFlutex32; total_price = total_price + total_ChampagneFlutex32
+			var Qty_White_MultiWine125mlx32= document.forms["frm_pricelist"]["Qty_White_MultiWine125mlx32"].value;	var total_White_MultiWine125mlx32= price_White_MultiWine125mlx32 * Qty_White_MultiWine125mlx32; total_price = total_price + total_White_MultiWine125mlx32
+			var Qty_RedWine175mlx24= document.forms["frm_pricelist"]["Qty_RedWine175mlx24"].value;	var total_RedWine175mlx24= price_RedWine175mlx24 * Qty_RedWine175mlx24; total_price = total_price + total_RedWine175mlx24
+			var Qty_Brandyx24= document.forms["frm_pricelist"]["Qty_Brandyx24"].value;	var total_Brandyx24= price_Brandyx24 * Qty_Brandyx24; total_price = total_price + total_Brandyx24
+			var Qty_HighBallGlassx24= document.forms["frm_pricelist"]["Qty_HighBallGlassx24"].value;	var total_HighBallGlassx24= price_HighBallGlassx24 * Qty_HighBallGlassx24; total_price = total_price + total_HighBallGlassx24
+			var Qty_PintGlassx12= document.forms["frm_pricelist"]["Qty_PintGlassx12"].value;	var total_PintGlassx12= price_PintGlassx12 * Qty_PintGlassx12; total_price = total_price + total_PintGlassx12
+			var Qty_Martini_cocktailGlassx12= document.forms["frm_pricelist"]["Qty_Martini_cocktailGlassx12"].value;	var total_Martini_cocktailGlassx12= price_Martini_cocktailGlassx12 * Qty_Martini_cocktailGlassx12; total_price = total_price + total_Martini_cocktailGlassx12
+				
+				
+			var Qty_TableNumberStand_number= document.forms["frm_pricelist"]["Qty_TableNumberStand_number"].value;	var total_TableNumberStand_number= price_TableNumberStand_number * Qty_TableNumberStand_number; total_price = total_price + total_TableNumberStand_number
+			var Qty_DrinksDispenser= document.forms["frm_pricelist"]["Qty_DrinksDispenser"].value;	var total_DrinksDispenser= price_DrinksDispenser * Qty_DrinksDispenser; total_price = total_price + total_DrinksDispenser
+				
+				
+			var Qty_Napkins= document.forms["frm_pricelist"]["Qty_Napkins"].value;	var total_Napkins= price_Napkins * Qty_Napkins; total_price = total_price + total_Napkins
+			var Qty_Squaretableclothpleaseindicatesize= document.forms["frm_pricelist"]["Qty_Squaretableclothpleaseindicatesize"].value;	var total_Squaretableclothpleaseindicatesize= price_Squaretableclothpleaseindicatesize * Qty_Squaretableclothpleaseindicatesize; total_price = total_price + total_Squaretableclothpleaseindicatesize
+			var Qty_Rectangulartableclothpleaseindicatesize= document.forms["frm_pricelist"]["Qty_Rectangulartableclothpleaseindicatesize"].value;	var total_Rectangulartableclothpleaseindicatesize= price_Rectangulartableclothpleaseindicatesize * Qty_Rectangulartableclothpleaseindicatesize; total_price = total_price + total_Rectangulartableclothpleaseindicatesize
+			var Qty_106in_roundtablecloth= document.forms["frm_pricelist"]["Qty_106in_roundtablecloth"].value;	var total_106in_roundtablecloth= price_106in_roundtablecloth * Qty_106in_roundtablecloth; total_price = total_price + total_106in_roundtablecloth
+			var Qty_120in_roundtablecloth= document.forms["frm_pricelist"]["Qty_120in_roundtablecloth"].value;	var total_120in_roundtablecloth= price_120in_roundtablecloth * Qty_120in_roundtablecloth; total_price = total_price + total_120in_roundtablecloth
+				
+				
+			var Qty_ChaffingDish_2Fuel= document.forms["frm_pricelist"]["Qty_ChaffingDish_2Fuel"].value;	var total_ChaffingDish_2Fuel= price_ChaffingDish_2Fuel * Qty_ChaffingDish_2Fuel; total_price = total_price + total_ChaffingDish_2Fuel
+				
+			var Qty_GlassJug1_8ltr= document.forms["frm_pricelist"]["Qty_GlassJug1_8ltr"].value;	var total_GlassJug1_8ltr= price_GlassJug1_8ltr * Qty_GlassJug1_8ltr; total_price = total_price + total_GlassJug1_8ltr
+			
+			var checkType = total_price.toString();
+			
+			if(total_price == 0){
+				alert("You have not added any item. Please check and submit again");
 			}
-		],
-		cutleries: [
+			else if(checkType != "NaN") 
 			{
-				displayName: "",
-				name: "",
-				price: 0
+				var deposit = total_price * price_Deposit
+				var total_price_deposit = total_price + deposit;
+				document.getElementById("total").value = "£"+total_price.toFixed(2);
+				document.getElementById("deposit").value = "£"+deposit.toFixed(2);
+				document.getElementById("total_cost").value = "£"+total_price_deposit.toFixed(2);
+				alert("Please find the estimated cost below. Feel free to print or save this page for your records. Thanks");
 			}
-		],
-		tables: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
+			else{
+					document.getElementById("total").value = "£0";
+					document.getElementById("deposit").value = "£0";
+					document.getElementById("total_cost").value = "£0";		
+					alert("Please enter only numeric values");
 			}
-		],
-		stemware: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
-			}
-		],
-		linens: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
-			}
-		],
-		miscellaneous: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
-			}
-		],
-		others: [
-			{
-				displayName: "",
-				name: "",
-				price: 0
-			}
-		]
-	};
-	function validateForm() {
-	var price_12in_Plate=0.15;	/*12in. Plate*/
-	var price_10in_Plate=0.12;	/*10in. Plate*/
-	var price_6_5in_Plate=0.1;	/*6.5in. Plate*/
-	var price_Soupbowl_dessertdish=0.12;	/*Soup bowl/dessert dish*/
-	var price_Coffeecup_saucer=0.2;	/*Coffee cup & saucer*/
-	var price_Teacup_saucer=0.2;	/*Tea cup & saucer*/
+			
+			return false
+		}
+		</script>
+	</head>
+	<body>
+		<p>Please fill and submit the form below to calculate an estimated cost of your order: </p>
 		
+		<form name="frm_pricelist" id="frm_pricelist" method="POST" action="" onsubmit="return validateForm()">	
+			<table>
+				<tr style='font-weight:bold'><th>Plates</th><th width='5px' align = 'left'>Price/Unit</th><th width='60px'>Quantity</th></tr>
+				<tr><td class='lbl'>12in. Plate:</td><td class='price'>£0.15</td><td class='textbx'><input type='text' name= 'Qty_12in_Plate'/></td></tr>
+				<tr><td class='lbl'>10in. Plate:</td><td class='price'>£0.12</td><td class='textbx'><input type='text' name= 'Qty_10in_Plate'/></td></tr>
+				<tr><td class='lbl'>6.5in. Plate:</td><td class='price'>£0.1</td><td class='textbx'><input type='text' name= 'Qty_6_5in_Plate'/></td></tr>
+				<tr><td class='lbl'>Soup bowl/dessert dish:</td><td class='price'>£0.12</td><td class='textbx'><input type='text' name= 'Qty_Soupbowl_dessertdish'/></td></tr>
+				<tr><td class='lbl'>Coffee cup & saucer:</td><td class='price'>£0.2</td><td class='textbx'><input type='text' name= 'Qty_Coffeecup_saucer'/></td></tr>
+				<tr><td class='lbl'>Tea cup & saucer:</td><td class='price'>£0.2</td><td class='textbx'><input type='text' name= 'Qty_Teacup_saucer'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Square</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>10in Square Plate:</td><td class='price'>£0.2</td><td class='textbx'><input type='text' name= 'Qty_10inSquarePlate'/></td></tr>
+				<tr><td class='lbl'>8in Square Plate:</td><td class='price'>£0.17</td><td class='textbx'><input type='text' name= 'Qty_8inSquarePlate'/></td></tr>
+				<tr><td class='lbl'>5in Square plate:</td><td class='price'>£0.15</td><td class='textbx'><input type='text' name= 'Qty_5inSquareplate'/></td></tr>
+				<tr><td class='lbl'>4.5in Square Bowl:</td><td class='price'>£0.15</td><td class='textbx'><input type='text' name= 'Qty_4_5inSquareBowl'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Cutlery</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Dinner Knifes (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_DinnerKnifesx10'/></td></tr>
+				<tr><td class='lbl'>Dinner Forks (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_DinnerForksx10'/></td></tr>
+				<tr><td class='lbl'>Side Knifes (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_SideKnifesx10'/></td></tr>
+				<tr><td class='lbl'>Side Forks (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_SideForksx10'/></td></tr>
+				<tr><td class='lbl'>Dessert Spoon (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_DessertSpoonx10'/></td></tr>
+				<tr><td class='lbl'>Soup Spoon (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_SoupSpoonx10'/></td></tr>
+				<tr><td class='lbl'>Teaspoon (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_Teaspoonx10'/></td></tr>
+				<tr><td class='lbl'>Serving Spoon:</td><td class='price'>£0.35</td><td class='textbx'><input type='text' name= 'Qty_ServingSpoon'/></td></tr>
+				<tr><td class='lbl'>Tablespoon:</td><td class='price'>£0.1</td><td class='textbx'><input type='text' name= 'Qty_Tablespoon'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Tables</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Round 5ft (10 people):</td><td class='price'>£5.5</td><td class='textbx'><input type='text' name= 'Qty_Round5ft10people'/></td></tr>
+				<tr><td class='lbl'>Round 5ft 6in (seat 12):</td><td class='price'>£6</td><td class='textbx'><input type='text' name= 'Qty_Round5ft6inseat12'/></td></tr>
+				<tr><td class='lbl'>White plastic chairs:</td><td class='price'>£1.5</td><td class='textbx'><input type='text' name= 'Qty_Whiteplasticchairs'/></td></tr>
+			</table>
+				<table>
+				<tr style='font-weight:bold'><th>Stemware</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Champagne Flute (x32):</td><td class='price'>£4.2</td><td class='textbx'><input type='text' name= 'Qty_ChampagneFlutex32'/></td></tr>
+				<tr><td class='lbl'>White/Multi Wine 125ml (x32):</td><td class='price'>£4.2</td><td class='textbx'><input type='text' name= 'Qty_White_MultiWine125mlx32'/></td></tr>
+				<tr><td class='lbl'>Red Wine 175ml (x24):</td><td class='price'>£3.36</td><td class='textbx'><input type='text' name= 'Qty_RedWine175mlx24'/></td></tr>
+				<tr><td class='lbl'>Brandy (x24):</td><td class='price'>£4.2</td><td class='textbx'><input type='text' name= 'Qty_Brandyx24'/></td></tr>
+				<tr><td class='lbl'>High Ball Glass  (x24):</td><td class='price'>£2.88</td><td class='textbx'><input type='text' name= 'Qty_HighBallGlassx24'/></td></tr>
+				<tr><td class='lbl'>Pint Glass (x12):</td><td class='price'>£2.25</td><td class='textbx'><input type='text' name= 'Qty_PintGlassx12'/></td></tr>
+				<tr><td class='lbl'>Martini/cocktail Glass (x12):</td><td class='price'>£3.75</td><td class='textbx'><input type='text' name= 'Qty_Martini_cocktailGlassx12'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Linen</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Napkins :</td><td class='price'>£0.5</td><td class='textbx'><input type='text' name= 'Qty_Napkins'/></td></tr>
+				<tr><td class='lbl'>Square tablecloth (please indicate size):</td><td class='price'>£5</td><td class='textbx'><input type='text' name= 'Qty_Squaretableclothpleaseindicatesize'/></td></tr>
+				<tr><td class='lbl'>Rectangular tablecloth (please indicate size):</td><td class='price'>£5</td><td class='textbx'><input type='text' name= 'Qty_Rectangulartableclothpleaseindicatesize'/></td></tr>
+				<tr><td class='lbl'>106 in. round tablecloth:</td><td class='price'>£6.5</td><td class='textbx'><input type='text' name= 'Qty_106in_roundtablecloth'/></td></tr>
+				<tr><td class='lbl'>120 in. round tablecloth:</td><td class='price'>£6.5</td><td class='textbx'><input type='text' name= 'Qty_120in_roundtablecloth'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Miscellaneous</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Table Number Stand (& number):</td><td class='price'>£1</td><td class='textbx'><input type='text' name= 'Qty_TableNumberStand_number'/></td></tr>
+				<tr><td class='lbl'>Drinks Dispenser:</td><td class='price'>£8</td><td class='textbx'><input type='text' name= 'Qty_DrinksDispenser'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Other</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Chaffing Dish & 2 Fuel:</td><td class='price'>£12</td><td class='textbx'><input type='text' name= 'Qty_ChaffingDish_2Fuel'/></td></tr>
+			</table>
+			<table>
+				<tr style='font-weight:bold'><th>Other</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
+				<tr><td class='lbl'>Glass Jug 1.8ltr:</td><td class='price'>£1</td><td class='textbx'><input type='text' name= 'Qty_GlassJug1_8ltr'/></td></tr>
+			</table>
+			
+			<p align="right"><input type="submit" name="calculate_cost" id="calculate_cost" align="right" /></p>
+			
+			<table bordercolordark="#CC33CC">
+				<tr><td colspan="2" class='lbl' style="font-weight:bold" width= "500">Total Cost of selected Items: </td><td class='textbx' width='60px'><input id="total" type='text' name= 'total_cost' disabled="disabled"/></td></tr>
+				<tr><td colspan="2" class='lbl' style="font-weight:bold">Deposit (50% of Total Cost):</td><td class='textbx'><input id="deposit" type='text' name= 'Qty_Deposit' disabled="disabled"/></td></tr>
+				<tr><td colspan="2" class='lbl' style="font-weight:bold">Overral Cost (Total Cost + Deposit):</td><td class='textbx'><input id="total_cost" type='text' name= 'Qty_Deposit' disabled="disabled" /></td></tr>
+			</table>
+		</form>
 		
-	var price_10inSquarePlate=0.2;	/*10in Square Plate*/
-	var price_8inSquarePlate=0.17;	/*8in Square Plate*/
-	var price_5inSquareplate=0.15;	/*5in Square plate*/
-	var price_4_5inSquareBowl=0.15;	/*4.5in Square Bowl*/
-		
-		
-	var price_DinnerKnifesx10=1.2;	/*Dinner Knifes (x10)*/
-	var price_DinnerForksx10=1.2;	/*Dinner Forks (x10)*/
-	var price_SideKnifesx10=1.2;	/*Side Knifes (x10)*/
-	var price_SideForksx10=1.2;	/*Side Forks (x10)*/
-	var price_DessertSpoonx10=1.2;	/*Dessert Spoon (x10)*/
-	var price_SoupSpoonx10=1.2;	/*Soup Spoon (x10)*/
-	var price_Teaspoonx10=1.2;	/*Teaspoon (x10)*/
-	var price_ServingSpoon=0.35;	/*Serving Spoon*/
-	var price_Tablespoon=0.1;	/*Tablespoon*/
-		
-		
-	var price_Round5ft10people=5.5;	/*Round 5ft (10 people)*/
-	var price_Round5ft6inseat12=6;	/*Round 5ft 6in (seat 12)*/
-	var price_Whiteplasticchairs=1.5;	/*White plastic chairs*/
-		
-		
-	var price_ChampagneFlutex32=4.2;	/*Champagne Flute (x32)*/
-	var price_White_MultiWine125mlx32=4.2;	/*White/Multi Wine 125ml (x32)*/
-	var price_RedWine175mlx24=3.36;	/*Red Wine 175ml (x24)*/
-	var price_Brandyx24=4.2;	/*Brandy (x24)*/
-	var price_HighBallGlassx24=2.88;	/*High Ball Glass  (x24)*/
-	var price_PintGlassx12=2.25;	/*Pint Glass (x12)*/
-	var price_Martini_cocktailGlassx12=3.75;	/*Martini/cocktail Glass (x12)*/
-		
-		
-	var price_TableNumberStand_number=1;	/*Table Number Stand (& number)*/
-	var price_DrinksDispenser=8;	/*Drinks Dispenser*/
-		
-		
-	var price_Napkins=0.5;	/*Napkins */
-	var price_Squaretableclothpleaseindicatesize=5;	/*Square tablecloth (please indicate size)*/
-	var price_Rectangulartableclothpleaseindicatesize=5;	/*Rectangular tablecloth (please indicate size)*/
-	var price_106in_roundtablecloth=6.5;	/*106 in. round tablecloth*/
-	var price_120in_roundtablecloth=6.5;	/*120 in. round tablecloth*/
-		
-	var price_ChaffingDish_2Fuel=12;	/*Chaffing Dish & 2 Fuel*/
-		
-	var price_GlassJug1_8ltr=1;	/*Glass Jug 1.8ltr*/
-	
-	var price_Deposit=0.5;
-	
-	var total_price = 0	
-		
-	var Qty_12in_Plate= document.forms["frm_pricelist"]["Qty_12in_Plate"].value;	
-	var total_12in_Plate= price_12in_Plate * Qty_12in_Plate; total_price = total_price + total_12in_Plate
-	
-	var Qty_10in_Plate= document.forms["frm_pricelist"]["Qty_10in_Plate"].value;	
-	var total_10in_Plate= price_10in_Plate * Qty_10in_Plate; total_price = total_price + total_10in_Plate
-	
-	var Qty_6_5in_Plate= document.forms["frm_pricelist"]["Qty_6_5in_Plate"].value;	
-	var total_6_5in_Plate= price_6_5in_Plate * Qty_6_5in_Plate; total_price = total_price + total_6_5in_Plate
-	
-	var Qty_Soupbowl_dessertdish= document.forms["frm_pricelist"]["Qty_Soupbowl_dessertdish"].value;	
-	var total_Soupbowl_dessertdish= price_Soupbowl_dessertdish * Qty_Soupbowl_dessertdish; total_price = total_price + total_Soupbowl_dessertdish
-	
-	var Qty_Coffeecup_saucer= document.forms["frm_pricelist"]["Qty_Coffeecup_saucer"].value;	
-	var total_Coffeecup_saucer= price_Coffeecup_saucer * Qty_Coffeecup_saucer; total_price = total_price + total_Coffeecup_saucer
-	
-	var Qty_Teacup_saucer= document.forms["frm_pricelist"]["Qty_Teacup_saucer"].value;	
-	var total_Teacup_saucer= price_Teacup_saucer * Qty_Teacup_saucer; total_price = total_price + total_Teacup_saucer
-		
-		
-	var Qty_10inSquarePlate= document.forms["frm_pricelist"]["Qty_10inSquarePlate"].value;	
-	var total_10inSquarePlate= price_10inSquarePlate * Qty_10inSquarePlate; total_price = total_price + total_10inSquarePlate
-	
-	var Qty_8inSquarePlate= document.forms["frm_pricelist"]["Qty_8inSquarePlate"].value;	
-	var total_8inSquarePlate= price_8inSquarePlate * Qty_8inSquarePlate; total_price = total_price + total_8inSquarePlate
-	
-	var Qty_5inSquareplate= document.forms["frm_pricelist"]["Qty_5inSquareplate"].value;	
-	var total_5inSquareplate= price_5inSquareplate * Qty_5inSquareplate; total_price = total_price + total_5inSquareplate
-	
-	var Qty_4_5inSquareBowl= document.forms["frm_pricelist"]["Qty_4_5inSquareBowl"].value;	
-	var total_4_5inSquareBowl= price_4_5inSquareBowl * Qty_4_5inSquareBowl; total_price = total_price + total_4_5inSquareBowl
-		
-		
-	var Qty_DinnerKnifesx10= document.forms["frm_pricelist"]["Qty_DinnerKnifesx10"].value;	
-	var total_DinnerKnifesx10= price_DinnerKnifesx10 * Qty_DinnerKnifesx10; total_price = total_price + total_DinnerKnifesx10
-	
-	var Qty_DinnerForksx10= document.forms["frm_pricelist"]["Qty_DinnerForksx10"].value;	
-	var total_DinnerForksx10= price_DinnerForksx10 * Qty_DinnerForksx10; total_price = total_price + total_DinnerForksx10
-	
-	var Qty_SideKnifesx10= document.forms["frm_pricelist"]["Qty_SideKnifesx10"].value;	
-	var total_SideKnifesx10= price_SideKnifesx10 * Qty_SideKnifesx10; total_price = total_price + total_SideKnifesx10
-	
-	var Qty_SideForksx10= document.forms["frm_pricelist"]["Qty_SideForksx10"].value;	
-	var total_SideForksx10= price_SideForksx10 * Qty_SideForksx10; total_price = total_price + total_SideForksx10
-	
-	var Qty_DessertSpoonx10= document.forms["frm_pricelist"]["Qty_DessertSpoonx10"].value;	
-	var total_DessertSpoonx10= price_DessertSpoonx10 * Qty_DessertSpoonx10; total_price = total_price + total_DessertSpoonx10
-	
-	var Qty_SoupSpoonx10= document.forms["frm_pricelist"]["Qty_SoupSpoonx10"].value;	
-	var total_SoupSpoonx10= price_SoupSpoonx10 * Qty_SoupSpoonx10; total_price = total_price + total_SoupSpoonx10
-	
-	var Qty_Teaspoonx10= document.forms["frm_pricelist"]["Qty_Teaspoonx10"].value;	
-	var total_Teaspoonx10= price_Teaspoonx10 * Qty_Teaspoonx10; total_price = total_price + total_Teaspoonx10
-	
-	var Qty_ServingSpoon= document.forms["frm_pricelist"]["Qty_ServingSpoon"].value;	
-	var total_ServingSpoon= price_ServingSpoon * Qty_ServingSpoon; total_price = total_price + total_ServingSpoon
-	
-	var Qty_Tablespoon= document.forms["frm_pricelist"]["Qty_Tablespoon"].value;	
-	var total_Tablespoon= price_Tablespoon * Qty_Tablespoon; total_price = total_price + total_Tablespoon
-		
-		
-	var Qty_Round5ft10people= document.forms["frm_pricelist"]["Qty_Round5ft10people"].value;	var total_Round5ft10people= price_Round5ft10people * Qty_Round5ft10people; total_price = total_price + total_Round5ft10people
-	var Qty_Round5ft6inseat12= document.forms["frm_pricelist"]["Qty_Round5ft6inseat12"].value;	var total_Round5ft6inseat12= price_Round5ft6inseat12 * Qty_Round5ft6inseat12; total_price = total_price + total_Round5ft6inseat12
-	var Qty_Whiteplasticchairs= document.forms["frm_pricelist"]["Qty_Whiteplasticchairs"].value;	var total_Whiteplasticchairs= price_Whiteplasticchairs * Qty_Whiteplasticchairs; total_price = total_price + total_Whiteplasticchairs
-		
-		
-	var Qty_ChampagneFlutex32= document.forms["frm_pricelist"]["Qty_ChampagneFlutex32"].value;	var total_ChampagneFlutex32= price_ChampagneFlutex32 * Qty_ChampagneFlutex32; total_price = total_price + total_ChampagneFlutex32
-	var Qty_White_MultiWine125mlx32= document.forms["frm_pricelist"]["Qty_White_MultiWine125mlx32"].value;	var total_White_MultiWine125mlx32= price_White_MultiWine125mlx32 * Qty_White_MultiWine125mlx32; total_price = total_price + total_White_MultiWine125mlx32
-	var Qty_RedWine175mlx24= document.forms["frm_pricelist"]["Qty_RedWine175mlx24"].value;	var total_RedWine175mlx24= price_RedWine175mlx24 * Qty_RedWine175mlx24; total_price = total_price + total_RedWine175mlx24
-	var Qty_Brandyx24= document.forms["frm_pricelist"]["Qty_Brandyx24"].value;	var total_Brandyx24= price_Brandyx24 * Qty_Brandyx24; total_price = total_price + total_Brandyx24
-	var Qty_HighBallGlassx24= document.forms["frm_pricelist"]["Qty_HighBallGlassx24"].value;	var total_HighBallGlassx24= price_HighBallGlassx24 * Qty_HighBallGlassx24; total_price = total_price + total_HighBallGlassx24
-	var Qty_PintGlassx12= document.forms["frm_pricelist"]["Qty_PintGlassx12"].value;	var total_PintGlassx12= price_PintGlassx12 * Qty_PintGlassx12; total_price = total_price + total_PintGlassx12
-	var Qty_Martini_cocktailGlassx12= document.forms["frm_pricelist"]["Qty_Martini_cocktailGlassx12"].value;	var total_Martini_cocktailGlassx12= price_Martini_cocktailGlassx12 * Qty_Martini_cocktailGlassx12; total_price = total_price + total_Martini_cocktailGlassx12
-		
-		
-	var Qty_TableNumberStand_number= document.forms["frm_pricelist"]["Qty_TableNumberStand_number"].value;	var total_TableNumberStand_number= price_TableNumberStand_number * Qty_TableNumberStand_number; total_price = total_price + total_TableNumberStand_number
-	var Qty_DrinksDispenser= document.forms["frm_pricelist"]["Qty_DrinksDispenser"].value;	var total_DrinksDispenser= price_DrinksDispenser * Qty_DrinksDispenser; total_price = total_price + total_DrinksDispenser
-		
-		
-	var Qty_Napkins= document.forms["frm_pricelist"]["Qty_Napkins"].value;	var total_Napkins= price_Napkins * Qty_Napkins; total_price = total_price + total_Napkins
-	var Qty_Squaretableclothpleaseindicatesize= document.forms["frm_pricelist"]["Qty_Squaretableclothpleaseindicatesize"].value;	var total_Squaretableclothpleaseindicatesize= price_Squaretableclothpleaseindicatesize * Qty_Squaretableclothpleaseindicatesize; total_price = total_price + total_Squaretableclothpleaseindicatesize
-	var Qty_Rectangulartableclothpleaseindicatesize= document.forms["frm_pricelist"]["Qty_Rectangulartableclothpleaseindicatesize"].value;	var total_Rectangulartableclothpleaseindicatesize= price_Rectangulartableclothpleaseindicatesize * Qty_Rectangulartableclothpleaseindicatesize; total_price = total_price + total_Rectangulartableclothpleaseindicatesize
-	var Qty_106in_roundtablecloth= document.forms["frm_pricelist"]["Qty_106in_roundtablecloth"].value;	var total_106in_roundtablecloth= price_106in_roundtablecloth * Qty_106in_roundtablecloth; total_price = total_price + total_106in_roundtablecloth
-	var Qty_120in_roundtablecloth= document.forms["frm_pricelist"]["Qty_120in_roundtablecloth"].value;	var total_120in_roundtablecloth= price_120in_roundtablecloth * Qty_120in_roundtablecloth; total_price = total_price + total_120in_roundtablecloth
-		
-		
-	var Qty_ChaffingDish_2Fuel= document.forms["frm_pricelist"]["Qty_ChaffingDish_2Fuel"].value;	var total_ChaffingDish_2Fuel= price_ChaffingDish_2Fuel * Qty_ChaffingDish_2Fuel; total_price = total_price + total_ChaffingDish_2Fuel
-		
-	var Qty_GlassJug1_8ltr= document.forms["frm_pricelist"]["Qty_GlassJug1_8ltr"].value;	var total_GlassJug1_8ltr= price_GlassJug1_8ltr * Qty_GlassJug1_8ltr; total_price = total_price + total_GlassJug1_8ltr
-	
-	var checkType = total_price.toString();
-	
-	if(total_price == 0){
-		alert("You have not added any item. Please check and submit again");
-	}
-	else if(checkType != "NaN") 
-	{
-		var deposit = total_price * price_Deposit
-		var total_price_deposit = total_price + deposit;	
-		//alert("The estimated cost is: £ " + total_price);
-		document.getElementById("total").value = "£"+total_price.toFixed(2);
-		document.getElementById("deposit").value = "£"+deposit.toFixed(2);
-		document.getElementById("total_cost").value = "£"+total_price_deposit.toFixed(2);
-		//alert("The estimated cost is: £ " + total_price + " and your deposit is: " + deposit);
-		alert("Please find the estimated cost below. Feel free to print or save this page for your records. Thanks");
-	}
-	else{
-			document.getElementById("total").value = "£0";
-			document.getElementById("deposit").value = "£0";
-			document.getElementById("total_cost").value = "£0";		
-			alert("Please enter only numeric values");
-	}
-	
-	return false
-}
-</script>
-
-<p>Please fill and submit the form below to calculate an estimated cost of your order: </p>
-
-<form name="frm_pricelist" id="frm_pricelist" method="POST" action="" onsubmit="return validateForm()">
-
-<table><tr style='font-weight:bold'><th>Plates</th><th width='5px' align = 'left'>Price/Unit</th><th width='60px'>Quantity</th></tr>
-<tr><td class='lbl'>12in. Plate:</td><td class='price'>£0.15</td><td class='textbx'><input type='text' name= 'Qty_12in_Plate'/></td></tr>
-<tr><td class='lbl'>10in. Plate:</td><td class='price'>£0.12</td><td class='textbx'><input type='text' name= 'Qty_10in_Plate'/></td></tr>
-<tr><td class='lbl'>6.5in. Plate:</td><td class='price'>£0.1</td><td class='textbx'><input type='text' name= 'Qty_6_5in_Plate'/></td></tr>
-<tr><td class='lbl'>Soup bowl/dessert dish:</td><td class='price'>£0.12</td><td class='textbx'><input type='text' name= 'Qty_Soupbowl_dessertdish'/></td></tr>
-<tr><td class='lbl'>Coffee cup & saucer:</td><td class='price'>£0.2</td><td class='textbx'><input type='text' name= 'Qty_Coffeecup_saucer'/></td></tr>
-<tr><td class='lbl'>Tea cup & saucer:</td><td class='price'>£0.2</td><td class='textbx'><input type='text' name= 'Qty_Teacup_saucer'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Square</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>10in Square Plate:</td><td class='price'>£0.2</td><td class='textbx'><input type='text' name= 'Qty_10inSquarePlate'/></td></tr>
-<tr><td class='lbl'>8in Square Plate:</td><td class='price'>£0.17</td><td class='textbx'><input type='text' name= 'Qty_8inSquarePlate'/></td></tr>
-<tr><td class='lbl'>5in Square plate:</td><td class='price'>£0.15</td><td class='textbx'><input type='text' name= 'Qty_5inSquareplate'/></td></tr>
-<tr><td class='lbl'>4.5in Square Bowl:</td><td class='price'>£0.15</td><td class='textbx'><input type='text' name= 'Qty_4_5inSquareBowl'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Cutlery</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Dinner Knifes (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_DinnerKnifesx10'/></td></tr>
-<tr><td class='lbl'>Dinner Forks (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_DinnerForksx10'/></td></tr>
-<tr><td class='lbl'>Side Knifes (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_SideKnifesx10'/></td></tr>
-<tr><td class='lbl'>Side Forks (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_SideForksx10'/></td></tr>
-<tr><td class='lbl'>Dessert Spoon (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_DessertSpoonx10'/></td></tr>
-<tr><td class='lbl'>Soup Spoon (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_SoupSpoonx10'/></td></tr>
-<tr><td class='lbl'>Teaspoon (x10):</td><td class='price'>£1.2</td><td class='textbx'><input type='text' name= 'Qty_Teaspoonx10'/></td></tr>
-<tr><td class='lbl'>Serving Spoon:</td><td class='price'>£0.35</td><td class='textbx'><input type='text' name= 'Qty_ServingSpoon'/></td></tr>
-<tr><td class='lbl'>Tablespoon:</td><td class='price'>£0.1</td><td class='textbx'><input type='text' name= 'Qty_Tablespoon'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Tables</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Round 5ft (10 people):</td><td class='price'>£5.5</td><td class='textbx'><input type='text' name= 'Qty_Round5ft10people'/></td></tr>
-<tr><td class='lbl'>Round 5ft 6in (seat 12):</td><td class='price'>£6</td><td class='textbx'><input type='text' name= 'Qty_Round5ft6inseat12'/></td></tr>
-<tr><td class='lbl'>White plastic chairs:</td><td class='price'>£1.5</td><td class='textbx'><input type='text' name= 'Qty_Whiteplasticchairs'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Stemware</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Champagne Flute (x32):</td><td class='price'>£4.2</td><td class='textbx'><input type='text' name= 'Qty_ChampagneFlutex32'/></td></tr>
-<tr><td class='lbl'>White/Multi Wine 125ml (x32):</td><td class='price'>£4.2</td><td class='textbx'><input type='text' name= 'Qty_White_MultiWine125mlx32'/></td></tr>
-<tr><td class='lbl'>Red Wine 175ml (x24):</td><td class='price'>£3.36</td><td class='textbx'><input type='text' name= 'Qty_RedWine175mlx24'/></td></tr>
-<tr><td class='lbl'>Brandy (x24):</td><td class='price'>£4.2</td><td class='textbx'><input type='text' name= 'Qty_Brandyx24'/></td></tr>
-<tr><td class='lbl'>High Ball Glass  (x24):</td><td class='price'>£2.88</td><td class='textbx'><input type='text' name= 'Qty_HighBallGlassx24'/></td></tr>
-<tr><td class='lbl'>Pint Glass (x12):</td><td class='price'>£2.25</td><td class='textbx'><input type='text' name= 'Qty_PintGlassx12'/></td></tr>
-<tr><td class='lbl'>Martini/cocktail Glass (x12):</td><td class='price'>£3.75</td><td class='textbx'><input type='text' name= 'Qty_Martini_cocktailGlassx12'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Miscellaneous</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Table Number Stand (& number):</td><td class='price'>£1</td><td class='textbx'><input type='text' name= 'Qty_TableNumberStand_number'/></td></tr>
-<tr><td class='lbl'>Drinks Dispenser:</td><td class='price'>£8</td><td class='textbx'><input type='text' name= 'Qty_DrinksDispenser'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Linen</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Napkins :</td><td class='price'>£0.5</td><td class='textbx'><input type='text' name= 'Qty_Napkins'/></td></tr>
-<tr><td class='lbl'>Square tablecloth (please indicate size):</td><td class='price'>£5</td><td class='textbx'><input type='text' name= 'Qty_Squaretableclothpleaseindicatesize'/></td></tr>
-<tr><td class='lbl'>Rectangular tablecloth (please indicate size):</td><td class='price'>£5</td><td class='textbx'><input type='text' name= 'Qty_Rectangulartableclothpleaseindicatesize'/></td></tr>
-<tr><td class='lbl'>106 in. round tablecloth:</td><td class='price'>£6.5</td><td class='textbx'><input type='text' name= 'Qty_106in_roundtablecloth'/></td></tr>
-<tr><td class='lbl'>120 in. round tablecloth:</td><td class='price'>£6.5</td><td class='textbx'><input type='text' name= 'Qty_120in_roundtablecloth'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Other</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Chaffing Dish & 2 Fuel:</td><td class='price'>£12</td><td class='textbx'><input type='text' name= 'Qty_ChaffingDish_2Fuel'/></td></tr>
-</table>
-<table><tr style='font-weight:bold'><th>Other</th><th width='60px'>Price/Unit</th><th width='5px' align = 'left'>Quantity</th></tr>
-<tr><td class='lbl'>Glass Jug 1.8ltr:</td><td class='price'>£1</td><td class='textbx'><input type='text' name= 'Qty_GlassJug1_8ltr'/></td></tr>
-</table>
-
-<p align="right"><input type="submit" name="calculate_cost" id="calculate_cost" align="right" /></p>
-
-<table bordercolordark="#CC33CC">
-<tr><td colspan="2" class='lbl' style="font-weight:bold" width= "500">Total Cost of selected Items: </td><td class='textbx' width='60px'><input id="total" type='text' name= 'total_cost' disabled="disabled"/></td></tr>
-<tr><td colspan="2" class='lbl' style="font-weight:bold">Deposit (50% of Total Cost):</td><td class='textbx'><input id="deposit" type='text' name= 'Qty_Deposit' disabled="disabled"/></td></tr>
-<tr><td colspan="2" class='lbl' style="font-weight:bold">Overral Cost (Total Cost + Deposit):</td><td class='textbx'><input id="total_cost" type='text' name= 'Qty_Deposit' disabled="disabled" /></td></tr>
-</table>
-</form>
-<table><tr style="font-weight:bold"><th>Optional Service Charges</th><th width='5px' align = 'left'>Price</th></tr>
-<tr>
-<td class='lbl'>Delivery & Collection (within MK):</td>
-<td class='price'>£20</td>
-</tr>
-<tr>
-<td class='lbl'>Waiting Service Per staff:</td>
-<td class='price'>£10.00/hr</td></tr>
-<tr>
-<td class='lbl'>After Party Tidy Up Service:</td>
-<td class='price'>Negotiable</td>
-</tr>
-<tr><td class='lbl'>Washing Up Service:</td>
-<td class='price'>£50%</td>
-</tr>
-</table>
+		<table><tr style="font-weight:bold"><th>Optional Service Charges</th><th width='5px' align = 'left'>Price</th></tr>
+			<tr>
+				<td class='lbl'>Delivery & Collection (within MK):</td>
+				<td class='price'>£20</td>
+			</tr>
+			<tr>
+				<td class='lbl'>Waiting Service Per staff:</td>
+				<td class='price'>£10.00/hr</td></tr>
+			<tr>
+				<td class='lbl'>After Party Tidy Up Service:</td>
+				<td class='price'>Negotiable</td>
+			</tr>
+			<tr>
+				<td class='lbl'>Washing Up Service:</td>
+				<td class='price'>£50%</td>
+			</tr>
+		</table>
+	</body>
+</html>
